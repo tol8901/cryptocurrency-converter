@@ -1,5 +1,7 @@
-def menu
+require './manager'
 
+def menu
+  manager = Manager.new
   loop do
     puts " Cryptcurrency Converter ".center(50, "#")
     puts "a) Convert to USD"
