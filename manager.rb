@@ -35,4 +35,9 @@ class Manager
     @@repo.keys
   end
 
+  # calculate amount of coins from user input, "to" which currency
+  def calculate(amount, symbol, to)
+    coin = @@repo[symbol]
+    amount * coin.send(to.to_sym)
+  end
 end
